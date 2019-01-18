@@ -1,0 +1,432 @@
+@import '_mixins.less';
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch:300,400,500,600,700|Indie+Flower');
+@import 'burgers.less';
+html, body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+}
+.gras_h3 {
+    font-weight: 500;
+}
+.font_h3 {
+    .h3_font;
+
+}
+
+.font_p {
+    .p_font;
+}
+.wrapper_man {
+    .wrapper;
+    @media @laptop {   
+        border: 5px solid white;
+        background-color: rgba(0, 0, 0, 0.7);
+        margin: 0px 150px;
+    }
+}
+
+.aside_icon {
+    display: none;
+    a {
+        @media @laptop {
+            color: white;
+            display: block;
+            margin: 15px auto 15px;
+        } 
+    }
+
+    @media @laptop {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 125px;
+        right: 0;
+        width: 50px;
+        background-color: rgba(255, 255, 255, 0.3)
+        
+    }
+    
+}
+
+.partie_1 {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.50), 
+      rgba(0, 0, 0, 0.50)
+    ),url('../img/accueil2.jpg');
+    .background_taille;
+    .center_align;
+
+    .partie_1_grand_titre {
+        h1 {
+            .h1_font;
+
+            span {
+                font-weight: 500;
+            }
+        }
+        
+    }
+    .citation {
+        letter-spacing: normal;
+        font-family: "indie flower";
+            font-weight: 300;
+            font-size: 25px;
+            color: white;
+    }
+    .image_partie_1 {
+        display: none;
+        @media @laptop {
+            display: block;
+        }
+        img {
+            
+            @media @laptop {   
+                width: 22%;
+            }
+        }
+    }
+    .partie_1_sous_titre {
+        h2 {
+            .h2_font;
+            span {
+                font-weight: 500;
+            }
+        }
+        
+    }
+    
+}
+.partie_2 {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.50), 
+      rgba(0, 0, 0, 0.50)
+    ),url('../img/a_propos2.jpg');
+    .background_taille;
+    .center_align;
+}
+.partie_3 {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75), 
+        rgba(0, 0, 0, 0.75)
+    ),url('../img/parcour_pro3.jpg');
+    .background_taille;
+    .grand_quad {
+        margin: 70px auto 30px;
+        @media @laptop {
+            margin: 70px auto 30px;
+            border: 1px solid white;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        
+        
+        
+        
+        
+        
+    }
+    .grand_3 {
+        @media @laptop {   
+            margin: 0px 150px;
+               
+              
+        }
+    }
+    
+    h3 {
+        .center_align;
+        
+    }
+    p {
+        .center_align;
+        @media @laptop {   
+            font-size: 49px;
+            margin: auto;
+            
+            
+            
+            
+            
+        }
+        span {
+            font-size: 24px;
+            @media @laptop {   
+                font-size: 47px;
+                  
+            }
+        }
+        margin: 10px 10px; 
+    }
+    .lien_cv {
+        width: 100%;
+        margin-top: 45px;
+        a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            .p_font;
+            font-size: 27px;
+            letter-spacing: normal;
+            @media @laptop {   
+                text-align: center;
+                font-size: 70px;
+            
+            }
+        }
+        
+    }
+}
+
+.partie_4 {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75), 
+        rgba(0, 0, 0, 0.75)
+    ),url('../img/portefolio.jpg');
+    .background_taille;
+    .center_align;
+    
+    .folio {
+        margin: 0px 10px 0px;
+    }
+
+    .folio_link_a {
+        background-color: grey;
+        height: 20vh;
+        margin-bottom: 50px;
+        @media @laptop {   
+            margin: 0px 25px 50px;
+        
+        }
+    }
+    
+
+}
+.partie_5 {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75), 
+        rgba(0, 0, 0, 0.75)
+    ),url('../img/contact.jpg');
+    .background_taille;
+    .partie_5_h3 {
+        text-align: center;
+        margin: 0px 65px;
+
+        span {
+            font-weight: 500;
+        }
+    }
+    .grand_form {
+        @media @laptop {   
+            width: 100%;
+        
+        } 
+    }
+    .form_5 {
+        margin: 0px 20px;
+        @media @laptop { 
+            margin: 0px 150px 0px;
+            
+        
+        }
+        input {
+            border: none;
+            margin-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0);
+            border: 3px solid rgba(255, 255, 255,0.50);
+            padding: 30px 10px;
+            color: white;
+            font-family: "indie flower";
+            font-size: 24px;
+            @media @laptop { 
+                padding: 50px 20px;
+                margin-bottom: 60px;
+                margin: 0px auto 60px;  
+                
+            
+            } 
+
+        }
+        textarea {
+            border: none;
+            color: white;
+            font-family: "indie flower";
+            font-size: 24px;
+            margin-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0);
+            border: 3px solid rgba(255, 255, 255,0.50);
+            padding: 30px 10px;
+             
+        }
+        .submit_5 {
+            color: white;
+            position: relative;
+            font-family: "indie flower";
+            font-weight: 300;
+            font-size: 25px;
+            border-radius: 40px;
+            margin-bottom: 100px;
+            margin-top: 55px;
+            @media @laptop { 
+                display: block;
+                margin: 55px auto 140px;
+                padding: 30px 0px;
+                width: 40%;
+            }
+        }
+        .confidential {
+            .p_font;
+            font-size: 20px;
+            @media @laptop {
+                font-size: 20px;
+            }
+        }
+        .click_pop_2 {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        #result {
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: normal;
+            color: red;
+            font-family: "indie flower";
+            
+            
+        }
+        .photo_input {
+            text-align: center;
+            color: white;
+            font-family: "indie flower";
+        }
+        @media @laptop {   
+            width: 100%;
+        
+        } 
+    }
+
+    
+    ::-webkit-input-placeholder {
+        color: white;
+        
+        font-family: "indie flower";
+        font-weight: 300;
+        font-size: 25px;
+        opacity: 0.7;
+       }
+       
+
+}
+footer {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 100px;
+    width: 100%;
+    height: 25vh;
+    position: absolute;
+    bottom: 0;
+    z-index: 998;
+    
+    
+    @media @laptop { 
+        height: 24vh;
+    }
+    
+
+    .legal_7 {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        
+        
+        text-align: center;
+        
+        
+        p {
+            font-family: "indie flower";
+            font-weight: 300;
+            font-size: 25px;
+            
+            @media @laptop { 
+                font-size: 40px;
+                margin-top: 20px;
+            }
+        }
+       
+    }
+    
+    .legal_icon {
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        margin-top: 10px;
+        
+        @media @laptop { 
+            font-size: 40px;
+            
+            
+        }
+    }
+    .petit_icon {
+        font-size: 18px;
+    }
+    
+}
+.popup_man, .popup_man2 {
+    
+    margin: auto;
+    max-height: 500px;
+    overflow: auto;
+    z-index: 999;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: gray;
+    // width: 500px;
+    padding: 50px;
+    display: none;
+    h2 {
+        font-family: 'chakra petch';
+        font-size: 26px;
+    }
+    h3 {
+        font-family: 'indie flower';
+        font-size: 24px;
+    }
+    a {
+        text-decoration: none;
+        font-size: 16px;
+    }
+    .fermeture_popup {
+        display: block;
+        position: fixed;
+        border-radius: 25px;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        
+    }
+    
+}
+.black_popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 998;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.7;
+}
+

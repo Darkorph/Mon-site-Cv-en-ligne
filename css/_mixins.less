@@ -1,0 +1,74 @@
+@phone:		~'screen and (min-width: 35.5em)';
+@tablet:	~'screen and (min-width: 48em)';
+@laptop:	~'screen and (min-width: 64em)';
+@desktop:	~'screen and (min-width: 80em)';
+
+.background_taille {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 125px 0px;
+}
+.center_align {
+    text-align: center;
+}
+.h1_font {
+    font-size: 70px;
+    font-family: 'chakra petch';
+    margin: 0;
+    font-weight: 300;
+    color: white;
+    @media @laptop {   
+        font-size: 130px;
+    }
+}
+.h2_font {
+    font-family: 'chakra petch';
+    color: white;
+    font-weight: 300;
+    font-size: 50px;
+    @media @laptop {   
+        font-size: 90px;
+    }
+}
+
+.h3_font {
+    color: white;
+    font-family: 'chakra petch';
+    font-size: 40px;
+    font-weight: 300;
+    @media @laptop {   
+        font-size: 90px;
+    }
+
+    
+}
+.p_font {
+    color: white;
+    font-family: 'indie flower';
+    font-weight: 300;
+    font-size: 23px;
+    @media @laptop {   
+        font-size: 49px;
+        text-align: start;
+        
+    }
+}
+.wrapper {
+    
+}
+.wrapper_p {
+    margin: 0px 10px;
+    @media @laptop {   
+        margin: 0px 150px;
+    }
+}
+.separator {
+    height: 5px;
+    background-color: white;
+    opacity: 0.5;
+    margin: 30px 35px;
+    @media @laptop {   
+        margin: 80px 500px;
+    }
+}

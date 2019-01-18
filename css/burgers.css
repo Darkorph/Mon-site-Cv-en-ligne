@@ -1,0 +1,205 @@
+.background_taille {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 125px 0px;
+}
+.center_align {
+  text-align: center;
+}
+.h1_font {
+  font-size: 70px;
+  font-family: 'chakra petch';
+  margin: 0;
+  font-weight: 300;
+  color: white;
+}
+@media screen and (min-width: 64em) {
+  .h1_font {
+    font-size: 130px;
+  }
+}
+.h2_font {
+  font-family: 'chakra petch';
+  color: white;
+  font-weight: 300;
+  font-size: 50px;
+}
+@media screen and (min-width: 64em) {
+  .h2_font {
+    font-size: 90px;
+  }
+}
+.h3_font {
+  color: white;
+  font-family: 'chakra petch';
+  font-size: 40px;
+  font-weight: 300;
+}
+@media screen and (min-width: 64em) {
+  .h3_font {
+    font-size: 90px;
+  }
+}
+.p_font {
+  color: white;
+  font-family: 'indie flower';
+  font-weight: 300;
+  font-size: 23px;
+}
+@media screen and (min-width: 64em) {
+  .p_font {
+    font-size: 49px;
+    text-align: start;
+  }
+}
+.wrapper_p {
+  margin: 0px 10px;
+}
+@media screen and (min-width: 64em) {
+  .wrapper_p {
+    margin: 0px 150px;
+  }
+}
+.separator {
+  height: 5px;
+  background-color: white;
+  opacity: 0.5;
+  margin: 30px 35px;
+}
+@media screen and (min-width: 64em) {
+  .separator {
+    margin: 80px 500px;
+  }
+}
+body {
+  font-family: 'chakra petch';
+}
+a {
+  color: white;
+  font-size: 18px;
+}
+@media screen and (min-width: 64em) {
+  a {
+    font-size: 25px;
+  }
+}
+/* header */
+.header {
+  background-color: rgba(255, 255, 255, 0.4);
+  /*   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1); */
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.header img {
+  width: 5vh;
+}
+.header ul {
+  background-color: rgba(255, 255, 255, 0);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+.header li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #333;
+}
+.header .logo {
+  display: block;
+  float: left;
+  padding: 10px 20px;
+  padding-left: 70px;
+  text-decoration: none;
+  font-family: 'chakra petch';
+  font-size: 2em;
+}
+/* menu */
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+/* menu icon */
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+/* menu btn */
+.header .menu-btn {
+  display: none;
+}
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+/* 48em = 768px */
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px 32px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+    position: relative;
+    right: 50px;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+@media (max-width: 50.5em) {
+  .header .logo {
+    padding: 10px 20px;
+  }
+}

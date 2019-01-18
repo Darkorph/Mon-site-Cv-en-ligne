@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch:300,400,500,600,700|Indie+Flower');
+.background_taille {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 125px 0px;
+}
+.center_align {
+  text-align: center;
+}
+.h1_font {
+  font-size: 70px;
+  font-family: 'chakra petch';
+  margin: 0;
+  font-weight: 300;
+  color: white;
+}
+@media screen and (min-width: 64em) {
+  .h1_font {
+    font-size: 130px;
+  }
+}
+.h2_font {
+  font-family: 'chakra petch';
+  color: white;
+  font-weight: 300;
+  font-size: 50px;
+}
+@media screen and (min-width: 64em) {
+  .h2_font {
+    font-size: 90px;
+  }
+}
+.h3_font {
+  color: white;
+  font-family: 'chakra petch';
+  font-size: 40px;
+  font-weight: 300;
+}
+@media screen and (min-width: 64em) {
+  .h3_font {
+    font-size: 90px;
+  }
+}
+.p_font {
+  color: white;
+  font-family: 'indie flower';
+  font-weight: 300;
+  font-size: 23px;
+}
+@media screen and (min-width: 64em) {
+  .p_font {
+    font-size: 49px;
+    text-align: start;
+  }
+}
+.wrapper_p {
+  margin: 0px 10px;
+}
+@media screen and (min-width: 64em) {
+  .wrapper_p {
+    margin: 0px 150px;
+  }
+}
+.separator {
+  height: 5px;
+  background-color: white;
+  opacity: 0.5;
+  margin: 30px 35px;
+}
+@media screen and (min-width: 64em) {
+  .separator {
+    margin: 80px 500px;
+  }
+}
+body {
+  font-family: 'chakra petch';
+}
+a {
+  color: white;
+  font-size: 18px;
+}
+@media screen and (min-width: 64em) {
+  a {
+    font-size: 25px;
+  }
+}
+/* header */
+.header {
+  background-color: rgba(255, 255, 255, 0.4);
+  /*   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1); */
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.header img {
+  width: 5vh;
+}
+.header ul {
+  background-color: rgba(255, 255, 255, 0);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+.header li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #333;
+}
+.header .logo {
+  display: block;
+  float: left;
+  padding: 10px 20px;
+  padding-left: 70px;
+  text-decoration: none;
+  font-family: 'chakra petch';
+  font-size: 2em;
+}
+/* menu */
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+/* menu icon */
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+/* menu btn */
+.header .menu-btn {
+  display: none;
+}
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+/* 48em = 768px */
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px 32px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+    position: relative;
+    right: 50px;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+@media (max-width: 50.5em) {
+  .header .logo {
+    padding: 10px 20px;
+  }
+}
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+}
+.gras_h3 {
+  font-weight: 500;
+}
+.font_h3 {
+  color: white;
+  font-family: 'chakra petch';
+  font-size: 40px;
+  font-weight: 300;
+}
+@media screen and (min-width: 64em) {
+  .font_h3 {
+    font-size: 90px;
+  }
+}
+.font_p {
+  color: white;
+  font-family: 'indie flower';
+  font-weight: 300;
+  font-size: 23px;
+}
+@media screen and (min-width: 64em) {
+  .font_p {
+    font-size: 49px;
+    text-align: start;
+  }
+}
+@media screen and (min-width: 64em) {
+  .wrapper_man {
+    border: 5px solid white;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0px 150px;
+  }
+}
+.aside_icon {
+  display: none;
+}
+@media screen and (min-width: 64em) {
+  .aside_icon a {
+    color: white;
+    display: block;
+    margin: 15px auto 15px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .aside_icon {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 125px;
+    right: 0;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+.partie_1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/accueil2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 125px 0px;
+  text-align: center;
+}
+.partie_1 .partie_1_grand_titre h1 {
+  font-size: 70px;
+  font-family: 'chakra petch';
+  margin: 0;
+  font-weight: 300;
+  color: white;
+}
+@media screen and (min-width: 64em) {
+  .partie_1 .partie_1_grand_titre h1 {
+    font-size: 130px;
+  }
+}
+.partie_1 .partie_1_grand_titre h1 span {
+  font-weight: 500;
+}
+.partie_1 .citation {
+  letter-spacing: normal;
+  font-family: "indie flower";
+  font-weight: 300;
+  font-size: 25px;
+  color: white;
+}
+.partie_1 .image_partie_1 {
+  display: none;
+}
+@media screen and (min-width: 64em) {
+  .partie_1 .image_partie_1 {
+    display: block;
+  }
+}
+@media screen and (min-width: 64em) {
+  .partie_1 .image_partie_1 img {
+    width: 22%;
+  }
+}
+.partie_1 .partie_1_sous_titre h2 {
+  font-family: 'chakra petch';
+  color: white;
+  font-weight: 300;
+  font-size: 50px;
+}
+@media screen and (min-width: 64em) {
+  .partie_1 .partie_1_sous_titre h2 {
+    font-size: 90px;
+  }
+}
+.partie_1 .partie_1_sous_titre h2 span {
+  font-weight: 500;
+}
+.partie_2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/a_propos2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 125px 0px;
+  text-align: center;
+}
+.partie_3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../img/parcour_pro3.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 125px 0px;
+}
+.partie_3 .grand_quad {
+  margin: 70px auto 30px;
+}
+@media screen and (min-width: 64em) {
+  .partie_3 .grand_quad {
+    margin: 70px auto 30px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 64em) {
+  .partie_3 .grand_3 {
+    margin: 0px 150px;
+  }
+}
+.partie_3 h3 {
+  text-align: center;
+}
+.partie_3 p {
+  text-align: center;
+  margin: 10px 10px;
+}
+@media screen and (min-width: 64em) {
+  .partie_3 p {
+    font-size: 49px;
+    margin: auto;
+  }
+}
+.partie_3 p span {
+  font-size: 24px;
+}
+@media screen and (min-width: 64em) {
+  .partie_3 p span {
+    font-size: 47px;
+  }
+}
+.partie_3 .lien_cv {
+  width: 100%;
+  margin-top: 45px;
+}
+.partie_3 .lien_cv a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-family: 'indie flower';
+  font-weight: 300;
+  font-size: 23px;
+  font-size: 27px;
+  letter-spacing: normal;
+}
+@media screen and (min-width: 64em) {
+  .partie_3 .lien_cv a {
+    font-size: 49px;
+    text-align: start;
+  }
+}
+@media screen and (min-width: 64em) {
+  .partie_3 .lien_cv a {
+    text-align: center;
+    font-size: 70px;
+  }
+}
+.partie_4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../img/portefolio.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 125px 0px;
+  text-align: center;
+}
+.partie_4 .folio {
+  margin: 0px 10px 0px;
+}
+.partie_4 .folio_link_a {
+  background-color: grey;
+  height: 20vh;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 64em) {
+  .partie_4 .folio_link_a {
+    margin: 0px 25px 50px;
+  }
+}
+.partie_5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../img/contact.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 125px 0px;
+}
+.partie_5 .partie_5_h3 {
+  text-align: center;
+  margin: 0px 65px;
+}
+.partie_5 .partie_5_h3 span {
+  font-weight: 500;
+}
+@media screen and (min-width: 64em) {
+  .partie_5 .grand_form {
+    width: 100%;
+  }
+}
+.partie_5 .form_5 {
+  margin: 0px 20px;
+}
+@media screen and (min-width: 64em) {
+  .partie_5 .form_5 {
+    margin: 0px 150px 0px;
+  }
+}
+.partie_5 .form_5 input {
+  border: none;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  padding: 30px 10px;
+  color: white;
+  font-family: "indie flower";
+  font-size: 24px;
+}
+@media screen and (min-width: 64em) {
+  .partie_5 .form_5 input {
+    padding: 50px 20px;
+    margin-bottom: 60px;
+    margin: 0px auto 60px;
+  }
+}
+.partie_5 .form_5 textarea {
+  border: none;
+  color: white;
+  font-family: "indie flower";
+  font-size: 24px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  padding: 30px 10px;
+}
+.partie_5 .form_5 .submit_5 {
+  color: white;
+  position: relative;
+  font-family: "indie flower";
+  font-weight: 300;
+  font-size: 25px;
+  border-radius: 40px;
+  margin-bottom: 100px;
+  margin-top: 55px;
+}
+@media screen and (min-width: 64em) {
+  .partie_5 .form_5 .submit_5 {
+    display: block;
+    margin: 55px auto 140px;
+    padding: 30px 0px;
+    width: 40%;
+  }
+}
+.partie_5 .form_5 .confidential {
+  color: white;
+  font-family: 'indie flower';
+  font-weight: 300;
+  font-size: 23px;
+  font-size: 20px;
+}
+@media screen and (min-width: 64em) {
+  .partie_5 .form_5 .confidential {
+    font-size: 49px;
+    text-align: start;
+  }
+}
+@media screen and (min-width: 64em) {
+  .partie_5 .form_5 .confidential {
+    font-size: 20px;
+  }
+}
+.partie_5 .form_5 .click_pop_2 {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.partie_5 .form_5 #result {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: normal;
+  color: red;
+  font-family: "indie flower";
+}
+.partie_5 .form_5 .photo_input {
+  text-align: center;
+  color: white;
+  font-family: "indie flower";
+}
+@media screen and (min-width: 64em) {
+  .partie_5 .form_5 {
+    width: 100%;
+  }
+}
+.partie_5 ::-webkit-input-placeholder {
+  color: white;
+  font-family: "indie flower";
+  font-weight: 300;
+  font-size: 25px;
+  opacity: 0.7;
+}
+footer {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 100px;
+  width: 100%;
+  height: 25vh;
+  position: absolute;
+  bottom: 0;
+  z-index: 998;
+}
+@media screen and (min-width: 64em) {
+  footer {
+    height: 24vh;
+  }
+}
+footer .legal_7 {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+footer .legal_7 p {
+  font-family: "indie flower";
+  font-weight: 300;
+  font-size: 25px;
+}
+@media screen and (min-width: 64em) {
+  footer .legal_7 p {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+}
+footer .legal_icon {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 10px;
+}
+@media screen and (min-width: 64em) {
+  footer .legal_icon {
+    font-size: 40px;
+  }
+}
+footer .petit_icon {
+  font-size: 18px;
+}
+.popup_man,
+.popup_man2 {
+  margin: auto;
+  max-height: 500px;
+  overflow: auto;
+  z-index: 999;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: gray;
+  padding: 50px;
+  display: none;
+}
+.popup_man h2,
+.popup_man2 h2 {
+  font-family: 'chakra petch';
+  font-size: 26px;
+}
+.popup_man h3,
+.popup_man2 h3 {
+  font-family: 'indie flower';
+  font-size: 24px;
+}
+.popup_man a,
+.popup_man2 a {
+  text-decoration: none;
+  font-size: 16px;
+}
+.popup_man .fermeture_popup,
+.popup_man2 .fermeture_popup {
+  display: block;
+  position: fixed;
+  border-radius: 25px;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.black_popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 998;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.7;
+}
